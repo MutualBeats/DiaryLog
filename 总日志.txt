@@ -53,3 +53,10 @@
 鄢煜民：浏览每日未执行订单
 
 初步分工互联网酒店系统软件体系结构设计文档
+
+2016.10.12
+接口定义分工：
+何慧娴： member，promotion
+顾恺嘉： user，hotel
+黄潇：  room，credit
+鄢煜民： order,vo,po
