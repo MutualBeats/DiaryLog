@@ -27,8 +27,8 @@ public class OrderPO {
 	 * @param finishTime
 	 */
 	public OrderPO(String orderId, String userId, String userName, String userPhone, MemberType memberType,
-			OrderState orderState, String hotelId, String hotelName, String roomId,RoomType roomType, double value, int creditChange,
-			String makeTime, String inTime, String outTime, String oInTime, String oOutTime, String finishTime) {
+			OrderState orderState, String hotelId, String hotelName, String roomId,RoomType roomType, int numOfRoom, double value, int creditChange,
+			String makeTime, String inTime, String outTime, String oInTime, String oOutTime, String finishTime, String latestETime, int numOfPeople, boolean children) {
 		super();
 		this.orderId = orderId;
 		this.userId = userId;
@@ -48,6 +48,10 @@ public class OrderPO {
 		this.oOutTime = oOutTime;
 		this.finishTime = finishTime;
 		this.roomType = roomType;
+		this.latestETime = latestETime;
+		this.children = children;
+		this.numOfPeople = numOfPeople;
+		this.numOfRoom = numOfRoom;
 	}
 	/*
 	 * 订单id
@@ -90,6 +94,10 @@ public class OrderPO {
 	 */
 	private RoomType roomType;
 	/*
+	 * 房间数量
+	 */
+	private int numOfRoom;
+	/*
 	 * 订单价格
 	 */
 	private double value;
@@ -101,6 +109,10 @@ public class OrderPO {
 	 * 订单生成时间
 	 */
 	private String makeTime;
+	/*
+	 * 最晚订单执行时间
+	 */
+	private String latestETime;
 	/*
 	 * 订单执行时间
 	 */
@@ -122,9 +134,38 @@ public class OrderPO {
 	 */
 	private String finishTime;
 	/*
-	 * 
+	 * 预计入住人数
 	 */
+	private int numOfPeople;
+	/*
+	 * 有无儿童
+	 */
+	private boolean children;
 	
+	public int getNumOfRoom() {
+		return numOfRoom;
+	}
+	public void setNumOfRoom(int numOfRoom) {
+		this.numOfRoom = numOfRoom;
+	}
+	public String getLatestETime() {
+		return latestETime;
+	}
+	public void setLatestETime(String latestETime) {
+		this.latestETime = latestETime;
+	}
+	public int getNumOfPeople() {
+		return numOfPeople;
+	}
+	public void setNumOfPeople(int numOfPeople) {
+		this.numOfPeople = numOfPeople;
+	}
+	public boolean isChildren() {
+		return children;
+	}
+	public void setChildren(boolean children) {
+		this.children = children;
+	}
 	public String getOrderId() {
 		return orderId;
 	}

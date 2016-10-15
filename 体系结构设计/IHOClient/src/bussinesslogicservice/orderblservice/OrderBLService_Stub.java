@@ -19,7 +19,6 @@ public class OrderBLService_Stub implements OrderBLService{
 	String hotelId;
 	String hotelName;
 	String roomId;
-	RoomType roomType;
 	double value;
 	int creditChange;
 	String makeTime;
@@ -28,7 +27,13 @@ public class OrderBLService_Stub implements OrderBLService{
 	String oInTime;
 	String oOutTime;
 	String finishTime;
+	RoomType roomType;
+	String latestETime;
+	boolean children;
+	int numOfPeople;
+	int numOfRoom;
 	
+
 	/**
 	 * @param orderId
 	 * @param userId
@@ -39,7 +44,6 @@ public class OrderBLService_Stub implements OrderBLService{
 	 * @param hotelId
 	 * @param hotelName
 	 * @param roomId
-	 * @param roomType
 	 * @param value
 	 * @param creditChange
 	 * @param makeTime
@@ -48,10 +52,16 @@ public class OrderBLService_Stub implements OrderBLService{
 	 * @param oInTime
 	 * @param oOutTime
 	 * @param finishTime
+	 * @param roomType
+	 * @param latestETime
+	 * @param children
+	 * @param numOfPeople
+	 * @param numOfRoom
 	 */
 	public OrderBLService_Stub(String orderId, String userId, String userName, String userPhone, MemberType memberType,
-			OrderState orderState, String hotelId, String hotelName, String roomId, RoomType roomType, double value, int creditChange,
-			String makeTime, String inTime, String outTime, String oInTime, String oOutTime, String finishTime) {
+			OrderState orderState, String hotelId, String hotelName, String roomId, double value, int creditChange,
+			String makeTime, String inTime, String outTime, String oInTime, String oOutTime, String finishTime,
+			RoomType roomType, String latestETime, boolean children, int numOfPeople, int numOfRoom) {
 		super();
 		this.orderId = orderId;
 		this.userId = userId;
@@ -71,6 +81,10 @@ public class OrderBLService_Stub implements OrderBLService{
 		this.oOutTime = oOutTime;
 		this.finishTime = finishTime;
 		this.roomType = roomType;
+		this.latestETime = latestETime;
+		this.children = children;
+		this.numOfPeople = numOfPeople;
+		this.numOfRoom = numOfRoom;
 	}
 
 	@Override
@@ -107,34 +121,36 @@ public class OrderBLService_Stub implements OrderBLService{
 
 	@Override
 	public OrderVO queryOrderById(String orderId) {
-		return new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, "", hotelName, roomId, roomType, value, creditChange, makeTime, inTime, outTime, oInTime, oOutTime, finishTime);
+		return new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children);
+
 	}
 	
 	@Override
 	public ArrayList<OrderVO> queryOrderByHotel(String hotelId, String userId) {
 		ArrayList<OrderVO> list = new ArrayList<OrderVO>();
-		list.add(new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, outTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
 	}
 
 	@Override
 	public ArrayList<OrderVO> queryRoomOrder(String hotelId, String roomId) {
 		ArrayList<OrderVO> list = new ArrayList<OrderVO>();
-		list.add(new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, outTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
+
 	}
 
 	@Override
 	public ArrayList<OrderVO> queryUserOrder(String userId) {
 		ArrayList<OrderVO> list = new ArrayList<OrderVO>();
-		list.add(new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, outTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
 	}
 
 	@Override
 	public ArrayList<OrderVO> queryHotelOrder(String hotelId) {
 		ArrayList<OrderVO> list = new ArrayList<OrderVO>();
-		list.add(new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, outTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderVO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
 	}
 

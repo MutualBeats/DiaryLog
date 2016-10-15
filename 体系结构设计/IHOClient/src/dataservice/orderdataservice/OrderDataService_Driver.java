@@ -11,9 +11,9 @@ import util.RoomType;
 public class OrderDataService_Driver {
 	
 	public void drive(OrderDataService orderDataService) {
-		OrderPO po1 = new OrderPO("1234567890123456", "1234567890", "WoDeMa", "12345678901", MemberType.Ordinary, OrderState.UnExcuted, "12345678", "和园宾馆", "3B346", RoomType.Single, 10000 ,1000, "2016/10/14", "2016/10/15", "2016/10/16", "2016/10/14", "2016/10/16", "2016/10/15");
-		OrderPO po2 = new OrderPO("1234567890123457", "1234567891", "WoDeTian", "98765432125", MemberType.Enterprise, OrderState.Canceled, "12345678", "和园宾馆", "3B347",RoomType.Double, 10000 ,-1000, "2016/10/14", "", "", "2016/10/14", "2016/10/16", "2016/10/14");
-		OrderPO po3 = new OrderPO("1234567890123458", "1234567891", "WoDeTian", "98765432125", MemberType.Enterprise, OrderState.Canceled, "12345678", "和园宾馆", "3B347",RoomType.Double, 10000 ,-1000, "2016/10/17", "", "", "2016/10/17", "2016/10/19", "2016/10/17");
+		OrderPO po1 = new OrderPO("1234567890123456", "1234567890", "WoDeMa", "12345678901", MemberType.Ordinary, OrderState.UnExcuted, "12345678", "和园宾馆", "3B346", RoomType.Single, 1, 10000 ,1000, "2016/10/14", "2016/10/15", "2016/10/16", "2016/10/14", "2016/10/16", "2016/10/15","2015/10/15",1,false);
+		OrderPO po2 = new OrderPO("1234567890123457", "1234567891", "WoDeTian", "98765432125", MemberType.Enterprise, OrderState.Canceled, "12345678", "和园宾馆", "3B347",RoomType.Double, 2, 10000 ,-1000, "2016/10/14", "", "", "2016/10/14", "2016/10/16", "2016/10/14", "2016/10/15",4,false);
+		OrderPO po3 = new OrderPO("1234567890123458", "1234567891", "WoDeTian", "98765432125", MemberType.Enterprise, OrderState.Canceled, "12345678", "和园宾馆", "3B347",RoomType.Double, 1, 10000 ,-1000, "2016/10/17", "", "", "2016/10/17", "2016/10/19", "2016/10/17","2016/10/18",1,false);
 
 		try {
 			orderDataService.insert(po1);

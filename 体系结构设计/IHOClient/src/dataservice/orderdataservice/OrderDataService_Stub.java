@@ -29,6 +29,12 @@ public class OrderDataService_Stub implements OrderDataService{
 	String oOutTime;
 	String finishTime;
 	RoomType roomType;
+	String latestETime;
+	boolean children;
+	int numOfPeople;
+	int numOfRoom;
+
+
 
 	/**
 	 * @param orderId
@@ -48,11 +54,17 @@ public class OrderDataService_Stub implements OrderDataService{
 	 * @param oInTime
 	 * @param oOutTime
 	 * @param finishTime
+	 * @param roomType
+	 * @param latestETime
+	 * @param children
+	 * @param numOfPeople
+	 * @param numOfRoom
 	 */
 	public OrderDataService_Stub(String orderId, String userId, String userName, String userPhone,
-			MemberType memberType, OrderState orderState, String hotelId, String hotelName, String roomId,RoomType roomType, double value,
+			MemberType memberType, OrderState orderState, String hotelId, String hotelName, String roomId, double value,
 			int creditChange, String makeTime, String inTime, String outTime, String oInTime, String oOutTime,
-			String finishTime) {
+			String finishTime, RoomType roomType, String latestETime, boolean children, int numOfPeople,
+			int numOfRoom) {
 		super();
 		this.orderId = orderId;
 		this.userId = userId;
@@ -72,6 +84,10 @@ public class OrderDataService_Stub implements OrderDataService{
 		this.oOutTime = oOutTime;
 		this.finishTime = finishTime;
 		this.roomType = roomType;
+		this.latestETime = latestETime;
+		this.children = children;
+		this.numOfPeople = numOfPeople;
+		this.numOfRoom = numOfRoom;
 	}
 
 	@Override
@@ -92,41 +108,41 @@ public class OrderDataService_Stub implements OrderDataService{
 
 	@Override
 	public OrderPO findById(String orderId) throws RemoteException {
-		return new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime);
+		return new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children);
 	}
 
 	@Override
 	public ArrayList<OrderPO> findByUser(String userId) throws RemoteException {
 		ArrayList<OrderPO> list = new ArrayList<OrderPO>();
-		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
 	}
 
 	@Override
 	public ArrayList<OrderPO> findByRoom(String hotelId, String roomId) throws RemoteException {
 		ArrayList<OrderPO> list = new ArrayList<OrderPO>();
-		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
 	}
 
 	@Override
 	public ArrayList<OrderPO> findUOByHotel(String hotelId, String userId) throws RemoteException {
 		ArrayList<OrderPO> list = new ArrayList<OrderPO>();
-		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
 	}
 
 	@Override
 	public ArrayList<OrderPO> findHotelOrder(String hotelId) throws RemoteException {
 		ArrayList<OrderPO> list = new ArrayList<OrderPO>();
-		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
 	}
-
+	
 	@Override
 	public ArrayList<OrderPO> findUnexcutedOrder() throws RemoteException {
 		ArrayList<OrderPO> list = new ArrayList<OrderPO>();
-		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime));
+		list.add(new OrderPO(orderId, userId, userName, userPhone, memberType, orderState, hotelId, hotelName, roomId, roomType, numOfRoom, value, creditChange, makeTime, inTime, oOutTime, oInTime, oOutTime, finishTime, latestETime, numOfPeople, children));
 		return list;
 	}
 

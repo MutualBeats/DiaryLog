@@ -25,8 +25,8 @@ public class OrderVO {
 	 * @param finishTime
 	 */
 	public OrderVO(String orderId, String userId, String userName, String userPhone, MemberType memberType,
-			OrderState orderState, String hotelId, String hotelName, String roomId, RoomType roomType, double value, int creditChange,
-			String makeTime, String inTime, String outTime, String oInTime, String oOutTime, String finishTime) {
+			OrderState orderState, String hotelId, String hotelName, String roomId,RoomType roomType, int numOfRoom, double value, int creditChange,
+			String makeTime, String inTime, String outTime, String oInTime, String oOutTime, String finishTime, String latestETime, int numOfPeople, boolean children) {
 		super();
 		this.orderId = orderId;
 		this.userId = userId;
@@ -45,6 +45,10 @@ public class OrderVO {
 		this.oInTime = oInTime;
 		this.oOutTime = oOutTime;
 		this.finishTime = finishTime;
+		this.latestETime = latestETime;
+		this.children = children;
+		this.numOfPeople = numOfPeople;
+		this.numOfRoom = numOfRoom;
 	}
 	
 	/*
@@ -120,5 +124,20 @@ public class OrderVO {
 	 * 订单完成时间
 	 */
 	public String finishTime;
-	
+	/*
+	 * 房间数量
+	 */
+	public int numOfRoom;
+	/*
+	 * 最晚订单执行时间
+	 */
+	public String latestETime;
+	/*
+	 * 预计入住人数
+	 */
+	public int numOfPeople;
+	/*
+	 * 有无儿童
+	 */
+	public boolean children;
 }
