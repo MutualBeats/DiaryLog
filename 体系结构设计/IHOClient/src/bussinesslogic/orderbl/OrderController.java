@@ -1,4 +1,4 @@
-package bussinesslogic.orderbussinesslogic;
+package bussinesslogic.orderbl;
 
 import java.util.ArrayList;
 
