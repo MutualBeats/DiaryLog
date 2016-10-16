@@ -16,5 +16,20 @@ public enum ResultMessage {
 	Exist, // 存在
 	NotExist, // 不存在
 	Success, // 成功
-	Failed // 失败
+	Failed, // 失败
+	
+	RegisterSuccess,
+	RegisterFail,
+	
+	HotelAddSuccess,
+	HotelAddFail,
+	
+	WebAddSuccess,
+	WebAddFail, 
+	
+	ChangeFail, 
+	ChangeSuccess,
+	
+	IllegalInputType,
+	
 }
