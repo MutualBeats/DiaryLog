@@ -29,9 +29,11 @@ public class RoomBLService_Driver {
 		else
 			System.out.println("Failed\n");
 		
-		ArrayList<RoomVO> rooms = roomBLService.getRoom("00000001");
+		ArrayList<RoomVO> rooms = roomBLService.getRoomList("00000001");
 		for (RoomVO roomVO : rooms)
-			System.out.println(roomVO.hotelID + '\t' + roomVO.roomNumber + '\t' + roomVO.price);
+			System.out.println(roomVO.hotelID + '\t' + roomVO.roomNumber + '\t' + roomVO.type + '\t' + roomVO.price + '\n');
 		
+		RoomVO vo = roomBLService.getRoomInfo("00000001", "1024");
+		System.out.println(vo.hotelID + '\t' + vo.roomNumber + '\t' + vo.type + '\t'+ vo.price + '\n');
 	}
 }
