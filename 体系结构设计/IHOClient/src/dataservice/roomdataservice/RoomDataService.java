@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import po.RoomPO;
 
 public interface RoomDataService {
-	public ArrayList<RoomPO> find(String HotelID) throws RemoteException;
+	public ArrayList<RoomPO> findAll(String HotelID) throws RemoteException;
+	
+	public RoomPO find(String HotelID, String roomID) throws RemoteException;
 	
 	public void insert(RoomPO po) throws RemoteException;
 	

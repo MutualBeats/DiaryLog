@@ -15,10 +15,16 @@ import util.RoomType;
 public class RoomDataServiceImpl_Stub implements RoomDataService {
 
 	@Override
-	public ArrayList<RoomPO> find(String HotelID) throws RemoteException {
+	public ArrayList<RoomPO> findAll(String HotelID) throws RemoteException {
 		ArrayList<RoomPO> roomList = new ArrayList<RoomPO>();
-		roomList.add(new RoomPO("00000001", "1024", RoomType.Single, 100, new ArrayList<RoomCheckRecord>(), new ArrayList<RoomConditionOfDate>()));
+		roomList.add(new RoomPO(HotelID, "1024", RoomType.Single, 100, new ArrayList<RoomCheckRecord>(), new ArrayList<RoomConditionOfDate>()));
 		return roomList;
+	}
+	
+	@Override
+	public RoomPO find(String HotelID, String roomNumber) throws RemoteException {
+		RoomPO po = new RoomPO(HotelID, roomNumber, RoomType.Single, 100, new ArrayList<RoomCheckRecord>(), new ArrayList<RoomConditionOfDate>());
+		return po;
 	}
 
 	@Override

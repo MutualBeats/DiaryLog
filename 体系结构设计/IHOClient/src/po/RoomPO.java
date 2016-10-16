@@ -18,7 +18,7 @@ public class RoomPO {
 	/**
 	 * 房间号
 	 */
-	private String roomNumber;
+	private String roomID;
 	/**
 	 * 房间类型
 	 */
@@ -39,68 +39,60 @@ public class RoomPO {
 	/**
 	 * 构造方法
 	 * @param hotelID
-	 * @param roomNumber
+	 * @param roomID
 	 * @param type
 	 * @param price
 	 * @param checkRecordList
 	 * @param conditionList
 	 */
-	public RoomPO(String hotelID, String roomNumber, RoomType type, int price, 
-				ArrayList<RoomCheckRecord> checkRecordList, ArrayList<RoomConditionOfDate> conditionList) {
+	public RoomPO(String hotelID, String roomID, RoomType type, int price, ArrayList<RoomCheckRecord> checkRecordList,
+			ArrayList<RoomConditionOfDate> conditionList) {
+		super();
 		this.hotelID = hotelID;
-		this.roomNumber = roomNumber;
+		this.roomID = roomID;
 		this.type = type;
 		this.price = price;
 		this.checkRecordList = checkRecordList;
 		this.conditionList = conditionList;
 	}
-
+	
 	public String getHotelID() {
 		return hotelID;
 	}
-
 	public void setHotelID(String hotelID) {
 		this.hotelID = hotelID;
 	}
-
-	public String getRoomNumber() {
-		return roomNumber;
+	public String getRoomID() {
+		return roomID;
 	}
-
-	public void setRoomNumber(String roomNumber) {
-		this.roomNumber = roomNumber;
+	public void setRoomID(String roomID) {
+		this.roomID = roomID;
 	}
-
 	public RoomType getType() {
 		return type;
 	}
-
 	public void setType(RoomType type) {
 		this.type = type;
 	}
-
 	public int getPrice() {
 		return price;
 	}
-
 	public void setPrice(int price) {
 		this.price = price;
 	}
-
 	public ArrayList<RoomCheckRecord> getCheckRecordList() {
 		return checkRecordList;
 	}
-
 	public void setCheckRecordList(ArrayList<RoomCheckRecord> checkRecordList) {
 		this.checkRecordList = checkRecordList;
 	}
-
 	public ArrayList<RoomConditionOfDate> getConditionList() {
 		return conditionList;
 	}
-
 	public void setConditionList(ArrayList<RoomConditionOfDate> conditionList) {
 		this.conditionList = conditionList;
 	}
+
+	
 	
 }

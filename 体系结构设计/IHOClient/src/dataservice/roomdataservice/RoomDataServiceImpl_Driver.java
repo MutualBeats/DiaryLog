@@ -18,7 +18,8 @@ public class RoomDataServiceImpl_Driver {
 		RoomPO po = new RoomPO("00000001", "1024", RoomType.Single, 100, new ArrayList<RoomCheckRecord>(), new ArrayList<RoomConditionOfDate>());
 		
 		roomDataService.insert(po);
-		roomDataService.find("00000001");
+		roomDataService.findAll("00000001");
+		roomDataService.find("00000001", "1024");
 		roomDataService.update(po);
 	}
 
