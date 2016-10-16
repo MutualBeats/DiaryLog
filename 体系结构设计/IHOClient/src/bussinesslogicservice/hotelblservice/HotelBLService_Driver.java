@@ -37,7 +37,7 @@ public class HotelBLService_Driver {
 		for (HotelVO hotelVO : hotelList)
 			System.out.println(hotelVO.hotelName + '\t'  + hotelVO.address + '\t' + hotelVO.starLevel + '\t' + hotelVO.score + '\n');
 		
-		HotelEvaluationVO vo2 = new HotelEvaluationVO("00000001", "丁二玉", "2016-10-16", 5, "强，无敌！");
+		HotelEvaluationVO vo2 = new HotelEvaluationVO("00000001", "丁二玉", "2016/10/16", 5, "强，无敌！");
 		result = hotelBLService.EvaluateHotel(vo2);
 		if(result == ResultMessage.EvaluateSuccess)
 			System.out.println("Evaluate succeed!\n");
