@@ -6,10 +6,7 @@ package bussinesslogicservice.roomblservice;
 
 import java.util.ArrayList;
 
-import util.ResultMessage;
-import util.RoomCheckRecord;
-import util.RoomConditionOfDate;
-import util.RoomType;
+import util.*;
 import vo.RoomVO;
 
 public class RoomBLService_Driver {
@@ -29,11 +26,9 @@ public class RoomBLService_Driver {
 		else
 			System.out.println("Failed\n");
 		
-		ArrayList<RoomVO> rooms = roomBLService.getRoomList("00000001");
+		ArrayList<RoomVO> rooms = roomBLService.getRoom("00000001");
 		for (RoomVO roomVO : rooms)
-			System.out.println(roomVO.hotelID + '\t' + roomVO.roomID + '\t' + roomVO.type + '\t' + roomVO.price + '\n');
+			System.out.println(roomVO.hotelID + '\t' + roomVO.roomNumber + '\t' + roomVO.price);
 		
-		RoomVO vo = roomBLService.getRoomInfo("00000001", "1024");
-		System.out.println(vo.hotelID + '\t' + vo.roomID + '\t' + vo.type + '\t'+ vo.price + '\n');
 	}
 }

@@ -2,10 +2,7 @@ package bussinesslogicservice.roomblservice;
 
 import java.util.ArrayList;
 
-import util.ResultMessage;
-import util.RoomCheckRecord;
-import util.RoomConditionOfDate;
-import util.RoomType;
+import util.*;
 import vo.RoomVO;
 
 public class RoomBLService_Stub implements RoomBLService {
@@ -45,7 +42,7 @@ public class RoomBLService_Stub implements RoomBLService {
 
 	// 得到某酒店房间列表
 	@Override
-	public ArrayList<RoomVO> getRoomList(String hotelID) {
+	public ArrayList<RoomVO> getRoom(String hotelID) {
 		if(hotelID.equals("00000001")) {
 			ArrayList<RoomVO> roomList = new ArrayList<RoomVO>();
 			roomList.add(new RoomVO(hotelID, roomNumber, type, price, checkRecordList, conditionList));
@@ -54,12 +51,4 @@ public class RoomBLService_Stub implements RoomBLService {
 		else return null;
 	}
 
-	// 得到单个房间信息
-	@Override
-	public RoomVO getRoomInfo(String hotelID, String roomNumber) {
-		if(hotelID.equals("00000001") && roomNumber.equals("1024"))
-			return new RoomVO(hotelID, roomNumber, type, price, checkRecordList, conditionList);
-		else return null;
-	}
-	
 }

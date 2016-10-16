@@ -21,9 +21,5 @@ public interface RoomBLService {
 	/**
 	 * 获得某酒店的所有房间
 	 */
-	public ArrayList<RoomVO> getRoomList(String hotelID);
-	/**
-	 * 获得单个房间信息
-	 */
-	public RoomVO getRoomInfo(String hotelID, String roomNumber);
+	public ArrayList<RoomVO> getRoom(String hotelID);
 }

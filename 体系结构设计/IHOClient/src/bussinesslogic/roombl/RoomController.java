@@ -21,13 +21,7 @@ public class RoomController implements RoomBLService{
 	}
 
 	@Override
-	public ArrayList<RoomVO> getRoomList(String hotelID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public RoomVO getRoomInfo(String hotelID, String roomNumber) {
+	public ArrayList<RoomVO> getRoom(String hotelID) {
 		// TODO Auto-generated method stub
 		return null;
 	}

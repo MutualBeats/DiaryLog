@@ -5,10 +5,7 @@
 package vo;
 
 import java.util.ArrayList;
-
-import util.RoomCheckRecord;
-import util.RoomConditionOfDate;
-import util.RoomType;
+import util.*;
 
 public class RoomVO {
 	/**
@@ -18,7 +15,7 @@ public class RoomVO {
 	/**
 	 * 房间号
 	 */
-	public String roomID;
+	public String roomNumber;
 	/**
 	 * 房间类型
 	 */
@@ -39,21 +36,19 @@ public class RoomVO {
 	/**
 	 * 构造方法
 	 * @param hotelID
-	 * @param roomID
+	 * @param roomNumber
 	 * @param type
 	 * @param price
 	 * @param checkRecordList
 	 * @param conditionList
 	 */
-	public RoomVO(String hotelID, String roomID, RoomType type, int price, ArrayList<RoomCheckRecord> checkRecordList,
-			ArrayList<RoomConditionOfDate> conditionList) {
-		super();
+	public RoomVO(String hotelID, String roomNumber, RoomType type, int price, 
+				ArrayList<RoomCheckRecord> checkRecordList, ArrayList<RoomConditionOfDate> conditionList) {
 		this.hotelID = hotelID;
-		this.roomID = roomID;
+		this.roomNumber = roomNumber;
 		this.type = type;
 		this.price = price;
 		this.checkRecordList = checkRecordList;
 		this.conditionList = conditionList;
 	}
-
 }
