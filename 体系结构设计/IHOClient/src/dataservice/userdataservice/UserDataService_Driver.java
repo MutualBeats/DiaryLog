@@ -37,7 +37,7 @@ public class UserDataService_Driver {
 		/*
 		 * 在数据库中更新一个StaffPO记录
 		 */
-		userDataService.updateStaffData(new StaffPO("0000000001", "admin", "hotel"));
+		userDataService.updateStaffData(new StaffPO("0000000001", "admin", "hotel","12345678"));
 		/*
 		 * 在数据库中更新一个ClientPO记录
 		 */
@@ -49,7 +49,7 @@ public class UserDataService_Driver {
 		/*
 		 * 在数据库中生成一个staffPO记录
 		 */
-		userDataService.insertStaff(new StaffPO("0000000001", "admin", "Hotel"));
+		userDataService.insertStaff(new StaffPO("0000000001", "admin", "Hotel","12345678"));
 		/*
 		 * 检测是否允许登陆
 		 */

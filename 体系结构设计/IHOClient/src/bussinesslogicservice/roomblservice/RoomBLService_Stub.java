@@ -28,16 +28,16 @@ public class RoomBLService_Stub implements RoomBLService {
 	@Override
 	public ResultMessage importRoom(ArrayList<RoomVO> importRoomList) {
 		if(importRoomList.size() == 1)
-			return ResultMessage.Success;
-		else return ResultMessage.Failed;
+			return ResultMessage.ImportSuccess;
+		else return ResultMessage.ImportFailed;
 	}
 
 	// 更新客房信息
 	@Override
 	public ResultMessage updateRoom(ArrayList<RoomVO> updateRoomList) {
 		if(updateRoomList.size() == 1)
-			return ResultMessage.Success;
-		else return ResultMessage.Failed;
+			return ResultMessage.RoomUpdateSuccess;
+		else return ResultMessage.RoomUpdateFailed;
 	}
 
 	// 得到某酒店房间列表

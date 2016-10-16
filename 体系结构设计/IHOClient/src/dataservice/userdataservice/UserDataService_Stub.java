@@ -43,7 +43,7 @@ public class UserDataService_Stub implements UserDataService{
 
 	@Override
 	public StaffPO findStaffData(String StaffID) throws RemoteException {
-		return new StaffPO("0000000001", "admin", "hotel");
+		return new StaffPO("0000000001", "admin", "hotel","12345678");
 	}
 
 	@Override

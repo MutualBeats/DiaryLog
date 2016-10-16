@@ -2,6 +2,7 @@ package bussinesslogicservice.memberblservice;
 
 import java.util.ArrayList;
 
+import util.ResultMessage;
 import vo.MemberVO;
 
 public class Memberbl_Drive {
@@ -9,10 +10,18 @@ public class Memberbl_Drive {
 		MemberVO vo1=new MemberVO("1234567890", "腾讯企业",2);
 		MemberVO vo2=new MemberVO("1234567891", "1997.01.01",1);
 		try{
-			memberLogicService.businessRegister(vo1);
-			memberLogicService.originalRegister(vo2);
+			ResultMessage resultMessage;
+			
+			resultMessage=memberLogicService.businessRegister(vo1);
+			System.out.println(resultMessage.toString());
+			
+			resultMessage=memberLogicService.originalRegister(vo2);
+			System.out.println(resultMessage.toString());
+			
 			memberLogicService.get("1234567890", vo1);
+			
 			memberLogicService.levelLook("1234567891", vo2);
+			
 			ArrayList<Integer> levelList = new ArrayList<>();
 			levelList.add(20);
 			levelList.add(1);

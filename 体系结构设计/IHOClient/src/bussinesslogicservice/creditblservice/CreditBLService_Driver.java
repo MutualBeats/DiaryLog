@@ -13,12 +13,12 @@ public class CreditBLService_Driver {
 	public void drive(CreditBLService creditBLService) {
 		ResultMessage result;
 		result = creditBLService.increaseCredit("0000000001", 100);
-		if(result == ResultMessage.Exist)
+		if(result == ResultMessage.ClientExist)
 			System.out.println("Client exists\n");
 		else
 			System.out.println("Client doesn't exist\n");
 		result = creditBLService.decreaseCredit("0000000001", 100);
-		if(result == ResultMessage.Exist)
+		if(result == ResultMessage.ClientExist)
 			System.out.println("Client exists\n");
 		else
 			System.out.println("Client doesn't exist\n");

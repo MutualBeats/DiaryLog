@@ -14,14 +14,21 @@ public class StaffVO {
 	 */
 	public String hotelname;
 	/*
-	 * 构造方法
+	 * 酒店工作人员所在酒店ID
+	 */
+	public String hotelId;
+	/**
 	 * @param staffID
 	 * @param staffname
 	 * @param hotelname
+	 * @param hotelId
 	 */
-	public StaffVO(String staffID, String staffname, String hotelname){
+	public StaffVO(String staffID, String staffname, String hotelname, String hotelId) {
+		super();
 		this.staffID = staffID;
 		this.staffname = staffname;
 		this.hotelname = hotelname;
+		this.hotelId = hotelId;
 	}
+
 }

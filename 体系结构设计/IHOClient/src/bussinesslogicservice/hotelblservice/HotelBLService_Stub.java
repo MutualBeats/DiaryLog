@@ -52,8 +52,8 @@ public class HotelBLService_Stub implements HotelBLService {
 	@Override
 	public ResultMessage changeHotelData(HotelVO vo) {
 		if(vo.hotelID.equals("00000001"))
-			return ResultMessage.Exist;
-		else return ResultMessage.NotExist;
+			return ResultMessage.HotelExist;
+		else return ResultMessage.HotelNotExist;
 	}
 
 	@Override
@@ -69,15 +69,15 @@ public class HotelBLService_Stub implements HotelBLService {
 	@Override
 	public ResultMessage EvaluateHotel(HotelEvaluationVO vo) {
 		if(vo.hotelID.equals("00000001"))
-			return ResultMessage.Exist;
-		else return ResultMessage.NotExist;
+			return ResultMessage.EvaluateSuccess;
+		else return ResultMessage.EvaluateFailed;
 	}
 
 	@Override
 	public ResultMessage AddHotel(HotelVO vo) {
 		if(vo.hotelID.equals("00000001"))
-			return ResultMessage.Exist;
-		else return ResultMessage.NotExist;
+			return ResultMessage.HotelExist;
+		else return ResultMessage.HotelNotExist;
 	}
 
 }

@@ -13,17 +13,22 @@ public enum ResultMessage {
 	InsertFailed, 
 	UpdateSucceed,
 	UpdateFailed,
-	Exist, // 存在
-	NotExist, // 不存在
-	Success, // 成功
-	Failed, // 失败
+	
+	ClientExist, // 存在
+	ClientNotExist, // 不存在
+	HotelExist,
+	HotelNotExist,
+	EvaluateSuccess,
+	EvaluateFailed,
 	
 	RegisterSuccess,
 	RegisterFail,
-	
+	ImportSuccess,
+	ImportFailed,
 	HotelAddSuccess,
 	HotelAddFail,
-	
+	RoomUpdateSuccess,
+	RoomUpdateFailed,
 	WebAddSuccess,
 	WebAddFail, 
 	

@@ -16,12 +16,12 @@ public class RoomBLService_Driver {
 		ArrayList<RoomVO> roomList = new ArrayList<RoomVO>();
 		roomList.add(new RoomVO("00000001", "1234", RoomType.Single, 100, new ArrayList<RoomCheckRecord>(), new ArrayList<RoomConditionOfDate>()));
 		result = roomBLService.importRoom(roomList);
-		if(result == ResultMessage.Success)
+		if(result == ResultMessage.ImportSuccess)
 			System.out.println("Success\n");
 		else
 			System.out.println("Failed\n");
 		result = roomBLService.updateRoom(roomList);
-		if(result == ResultMessage.Success)
+		if(result == ResultMessage.ImportSuccess)
 			System.out.println("Success\n");
 		else
 			System.out.println("Failed\n");

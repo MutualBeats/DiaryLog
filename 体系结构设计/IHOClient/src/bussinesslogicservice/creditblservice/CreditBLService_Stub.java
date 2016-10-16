@@ -23,16 +23,16 @@ public class CreditBLService_Stub implements CreditBLService {
 	@Override
 	public ResultMessage increaseCredit(String clientID, int value) {
 		if(clientID.equals("0000000001"))
-			return ResultMessage.Exist;
-		else return ResultMessage.NotExist;
+			return ResultMessage.ClientExist;
+		else return ResultMessage.ClientNotExist;
 	}
 
 	// 减少客户信用
 	@Override
 	public ResultMessage decreaseCredit(String clientID, int value) {
 		if(clientID.equals("0000000001"))
-			return ResultMessage.Exist;
-		else return ResultMessage.NotExist;
+			return ResultMessage.ClientExist;
+		else return ResultMessage.ClientNotExist;
 	}
 
 	// 信用记录界面得到客户的信用历史记录
