@@ -1,6 +1,7 @@
 package dataservice.userdataservice;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import po.ClientPO;
 import po.MarketerPO;
@@ -33,7 +34,7 @@ public class UserDataService_Driver {
 		/*
 		 * 在数据库中更新一个ClientPO记录
 		 */
-		userDataService.updateClientData(new ClientPO("0000000001", "admin", "123456789", 100));
+		userDataService.updateClientData(new ClientPO("0000000001", "admin", "123456789", 100, new ArrayList<String>()));
 		/*
 		 * 在数据库中更新一个StaffPO记录
 		 */
@@ -61,6 +62,6 @@ public class UserDataService_Driver {
 		/*
 		 * 在数据库中生成一个clientPO记录
 		 */
-		userDataService.insertClient(new ClientPO("0000000001", "admin", "123456789", 100), "123456");
+		userDataService.insertClient(new ClientPO("0000000001", "admin", "123456789", 100, new ArrayList<String>()), "123456");
 	}
 }
