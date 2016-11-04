@@ -6,5 +6,5 @@ public interface MarketerBLService {
 	/*
 	 * 获取网站营销人员信息
 	 */
-	public MarketerVO showMarketerData (String marketerID);
+	public MarketerVO showData (String marketerID);
 }
