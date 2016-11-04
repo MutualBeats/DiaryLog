@@ -20,8 +20,14 @@ public class RoomBLService_Driver {
 			System.out.println("Success\n");
 		else
 			System.out.println("Failed\n");
-		result = roomBLService.updateRoom(roomList);
-		if(result == ResultMessage.ImportSuccess)
+		
+		result = roomBLService.checkIn("3B323", "2016/11/4");
+		if(result == ResultMessage.RoomUpdateSuccess)
+			System.out.println("Success\n");
+		else
+			System.out.println("Failed\n");
+		result = roomBLService.checkOut("3B323", "2016/11/4");
+		if(result == ResultMessage.RoomUpdateSuccess)
 			System.out.println("Success\n");
 		else
 			System.out.println("Failed\n");

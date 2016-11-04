@@ -16,7 +16,7 @@ public interface HotelBLService {
 	/**
 	 * 显示酒店信息
 	 */
-	public HotelVO showHotelData (String HotelID);
+	public HotelVO showHotelData (String hotelID);
 	
 	/**
 	 * 修改酒店信息
@@ -31,11 +31,11 @@ public interface HotelBLService {
 	/**
 	 * 评价酒店
 	 */
-	public ResultMessage EvaluateHotel (HotelEvaluationVO vo);
+	public ResultMessage evaluateHotel (HotelEvaluationVO vo);
 	
 	/**
 	 * 添加酒店
 	 */
-	public ResultMessage AddHotel (HotelVO vo);
+	public ResultMessage addHotel (HotelVO vo);
 	
 }

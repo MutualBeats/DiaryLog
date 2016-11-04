@@ -32,14 +32,6 @@ public class RoomBLService_Stub implements RoomBLService {
 		else return ResultMessage.ImportFailed;
 	}
 
-	// 更新客房信息
-	@Override
-	public ResultMessage updateRoom(ArrayList<RoomVO> updateRoomList) {
-		if(updateRoomList.size() == 1)
-			return ResultMessage.RoomUpdateSuccess;
-		else return ResultMessage.RoomUpdateFailed;
-	}
-
 	// 得到某酒店房间列表
 	@Override
 	public ArrayList<RoomVO> getRoom(String hotelID) {
@@ -50,5 +42,17 @@ public class RoomBLService_Stub implements RoomBLService {
 		}
 		else return null;
 	}
-
+	
+	// 客户入住
+	@Override
+	public ResultMessage checkIn(String roomID, String date) {
+		return ResultMessage.RoomUpdateSuccess;
+	}
+	
+	// 客户退房
+	@Override
+	public ResultMessage checkOut(String roomID, String date) {
+		return ResultMessage.RoomUpdateSuccess;
+	}
 }
+

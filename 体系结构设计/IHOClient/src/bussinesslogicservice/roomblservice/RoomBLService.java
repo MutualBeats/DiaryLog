@@ -15,11 +15,15 @@ public interface RoomBLService {
 	 */
 	public ResultMessage importRoom(ArrayList<RoomVO> importRoomList);
 	/**
-	 * 更新客房信息
-	 */
-	public ResultMessage updateRoom(ArrayList<RoomVO> updateRoomList);
-	/**
 	 * 获得某酒店的所有房间
 	 */
 	public ArrayList<RoomVO> getRoom(String hotelID);
+	/**
+	 * 客户入住
+	 */
+	public ResultMessage checkIn(String roomID, String date);
+	/**
+	 * 客户退房
+	 */
+	public ResultMessage checkOut(String roomID, String date);
 }
