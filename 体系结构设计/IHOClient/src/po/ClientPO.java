@@ -29,6 +29,7 @@ public class ClientPO {
 	 * @param clientname
 	 * @param tel_number
 	 * @param credit
+	 * @param memberInfo
 	 */
 	public ClientPO(String clientID, String clientname, String tel_number, int credit, ArrayList<String> memberInfo){
 		this.clientID = clientID;

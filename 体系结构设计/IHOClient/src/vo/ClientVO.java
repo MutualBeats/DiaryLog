@@ -1,5 +1,7 @@
 package vo;
 
+import java.util.ArrayList;
+
 public class ClientVO {
 	/*
 	 * 用户ID
@@ -18,16 +20,22 @@ public class ClientVO {
 	 */
 	public int credit;
 	/*
+	 *用户会员信息 
+	 */
+	private ArrayList<String> memberInfo;
+	/*
 	 * 构造方法
 	 * @param clientID
 	 * @param clientname
 	 * @param tel_number
 	 * @param credit
+	 * @param memberInfo
 	 */
-	public ClientVO(String clientID, String clientname, String tel_number, int credit){
+	public ClientVO(String clientID, String clientname, String tel_number, int credit, ArrayList<String> memberInfo){
 		this.clientID = clientID;
 		this.clientname = clientname;
 		this.tel_number = tel_number;
 		this.credit = credit;
+		this.memberInfo = memberInfo;
 	}
 }

@@ -1,5 +1,7 @@
 package bussinesslogicservice.userblservice;
 
+import java.util.ArrayList;
+
 import util.ResultMessage;
 import vo.ClientVO;
 import vo.MarketerVO;
@@ -37,7 +39,7 @@ public class UserBLService_Stub implements UserBLService{
 
 	@Override
 	public ClientVO showClientData(String clientID) {
-		return new ClientVO("0000000001", "admin", "123456789", 100);
+		return new ClientVO("0000000001", "admin", "123456789", 100, new ArrayList<String>());
 	}
 
 	@Override

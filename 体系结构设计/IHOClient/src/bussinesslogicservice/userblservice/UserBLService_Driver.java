@@ -1,5 +1,7 @@
 package bussinesslogicservice.userblservice;
 
+import java.util.ArrayList;
+
 import util.ResultMessage;
 import vo.ClientVO;
 import vo.MarketerVO;
@@ -19,7 +21,7 @@ public class UserBLService_Driver {
 		/*
 		 * 修改用户信息
 		 */
-		result = userBLService.changeClientData(new ClientVO("0000000001", "admin", "123456789", 100));
+		result = userBLService.changeClientData(new ClientVO("0000000001", "admin", "123456789", 100, new ArrayList<String>()));
 		if(result==ResultMessage.ChangeSuccess)
 			System.out.println("Change successfully");
 		else
@@ -81,7 +83,7 @@ public class UserBLService_Driver {
 		/*
 		 * 注册新用户
 		 */
-		result = userBLService.Signup(new ClientVO("0000000001", "admin", "123456789", 100));
+		result = userBLService.Signup(new ClientVO("0000000001", "admin", "123456789", 100, new ArrayList<String>()));
 		if(result==ResultMessage.ChangeSuccess)
 			System.out.println("Signup successfully");
 		else
